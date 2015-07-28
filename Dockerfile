@@ -1,6 +1,6 @@
 FROM ubuntu:trusty
 
-MAINTAINER Claus Schneider <cls@praqma.net>
+MAINTAINER Ali <ali@praqma.net>
 
 WORKDIR /data
 EXPOSE 4000
@@ -18,4 +18,6 @@ RUN apt-get update
 RUN apt-cache showpkg linkchecker
 RUN apt-get install -y linkchecker
 
-CMD ["/bin/bash"]
+COPY ./entry.sh /
+COPY ./help.txt /
+ENTRYPOINT ["/entry.sh"]
