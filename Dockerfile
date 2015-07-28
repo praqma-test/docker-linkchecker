@@ -4,7 +4,6 @@ MAINTAINER Ali <ali@praqma.net>
 
 WORKDIR /data
 EXPOSE 4000
-
 RUN apt-get update \
 	&& apt-get install -y apt-utils \
 	&& apt-get install -y curl gcc \
