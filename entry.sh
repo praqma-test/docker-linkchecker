@@ -20,6 +20,6 @@ else
 exec linkchecker --check-css --check-html --complete --anchors --quiet -F=html/report/sit_repot.html ${url}
 fi
 else
-exec	less -FX ./help.txt
+exec	less -FX /help.txt
 fi
 set -x
