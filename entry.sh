@@ -18,6 +18,8 @@ elif [ "${url}" == "check" ]
 jekyll serve --force_polling -B -H 0.0.0.0
 echo ¤¤¤¤¤¤¤¤ Validating, be Patient ¤¤¤¤¤¤¤¤
 linkchecker --check-css --check-html --complete --anchors --quiet -F=html/report/site_report.html http://0.0.0.0:4000
+else
+exec	less -FX /help.txt
 fi
 
 elif [ "${cmnd}" == "check" ]
@@ -27,7 +29,7 @@ if [ "${url}" == "" ]
 	then
 	echo Provide URL to Validate
 else
-	exec linkchecker --check-css --check-html --complete --anchors --quiet -F=html/report/sit_repot.html ${url}
+	exec linkchecker --check-css --check-html --complete --anchors --quiet -F=html/report/site_report.html ${url}
 fi
 
 else
