@@ -19,7 +19,7 @@ jekyll serve --force_polling -B -H 0.0.0.0
 echo ¤¤¤¤¤¤¤¤ Validating, be Patient ¤¤¤¤¤¤¤¤
 linkchecker --check-css --check-html --complete --anchors --quiet -F=html/report/site_report.html http://0.0.0.0:4000
 else
-exec	less -FX /help.txt
+exec	less -rf -FX /help.txt
 fi
 
 elif [ "${cmnd}" == "check" ]
@@ -33,6 +33,6 @@ else
 fi
 
 else
-exec	less -FX /help.txt
+exec	less -rf -FX /help.txt
 fi
 set -x
