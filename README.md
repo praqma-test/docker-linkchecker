@@ -1,8 +1,8 @@
 _this document is entitled to be updated before release of addressed product_
-# Introduction to gijeli+ :
+# Introduction to gijeli+ 
 GiJeLi is a subtraction of the words Git Jekyll and Liquid which is the technology stack behind the GitHub Pages technology. At Praqma: The entire technology stack is wrapped up in a single Docker image - Including dynamic link validation. The docker images is used on clients during development and on Jenkins slaves as part of the continuous delivery pipeline in combination with the Josra Automated Git flow and the Git pretested integration plugin.
 
-## Pre-reqs.:
+## Pre-reqs.
 
 Linux - Have Docker up'n'running 
 
@@ -31,7 +31,7 @@ $ docker run -v $(pwd):\\data -p <port>:4000 alipraqma/validator <option>
 3. check _(runs linkchecker on provided URL-for pages rendered outside of container)_
 4. serve check _(serves jekyll pages and runs linkchecker on served pages within the same container)_
 
-# Examples:
+# Examples
 #### Build
 
 change your terminal’s present directory to the source directory you want to build your jekyll project in, and run the following command: 
@@ -82,7 +82,7 @@ $ docker run -v $(pwd):\\data -p <port>:4000 alipraqma/validator serve check
 → access your  web pages http://<boot2docker IP>:<port>
 → linkchecker report will be saved in folder <report> under name <site_reprot.html>, in your mounted directory 
 ```
-# Handy Hacks:
+# Handy Hacks
 Are you a “one container for one process” kind of guy ?
 >You can benefit out of docker “--link” option to serve and check your website in separate containers, using gijeli image
 
