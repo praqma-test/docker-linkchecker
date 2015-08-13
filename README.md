@@ -36,6 +36,7 @@ $ docker run -v $(pwd):\\data -p <port>:4000 alipraqma/validator <option>
 
 change your terminal’s present directory to the source directory you want to build your jekyll project in, and run the following command: 
 ```
+linux / Mac:
 $ docker run -v $(pwd):/data alipraqma/validator build
 
 windows:
@@ -46,6 +47,7 @@ $ docker run -v $(pwd):\\data alipraqma/validator build
 
 change your terminal's present directory to the directory containing your jekyll web project and run the following command:
 ```
+linux / Mac:
 $ docker run -v $(pwd):/data -p <port>:4000 alipraqma/validator serve
 
 windows:
@@ -62,6 +64,7 @@ _Use this option if your web project is NOT rendered into a container_
 change your terminal's present directory to the directory you want to keep your linkchecker report and run the following command:
 
 ```
+linux / Mac:
 $  docker run -v $(pwd):/data alipraqma/validator check <URL: for example. http://www.code-conf.com>
 
 windows:
@@ -74,6 +77,7 @@ _Use this option to serve and check your web project into the same container_
 
 change your terminal's present directory to the directory containing your jekyll web project and run the following command:
 ```
+linux / Mac:
 $ docker run -v $(pwd):/data -p <port>:4000 alipraqma/validator serve check
 
 windows:
