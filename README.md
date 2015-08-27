@@ -41,8 +41,9 @@ Windows:
 $ docker run -v $(pwd):\\data -p <port>:4000 alipraqma/validator jekyll serve --watch --force_polling -H 0.0.0.0
 → access web pages at http://<boot2docker IP>:<port>
 ```
-- Given example runs linkchecker on provided URL for pages rendered outside of container and stores validation report in html format, for more linkchecker features see [this link](http://wummel.github.io/linkchecker/) 
+- given example runs linkchecker on provided URL for pages rendered outside of container and stores validation report in html format, for more linkchecker features see [this link](http://wummel.github.io/linkchecker/) 
 
+running linkchecker rquires _write permission_ to mounted directory which is _Present Working Directoy_ in this example
 ```
 linux / Mac:
 $  docker run -v $(pwd):/data alipraqma/validator linkchecker --check-css --check-html --complete --anchors --quiet -F=html/<directory-name>/<file-name>.html <URL>
