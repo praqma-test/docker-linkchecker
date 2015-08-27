@@ -1,13 +1,14 @@
 #!/bin/bash
 set +x
-cmnd=${1}
+cmnd=$@
+option=${1}
 url=${2}
 
-if [ "${cmnd}" == "build" ]
+if [ "${option}" == "build" ]
 then
 exec jekyll build
 
-elif [ "${cmnd}" == "serve" ]
+elif [ "${option}" == "serve" ]
 then
 
 if [ "${url}" == "" ]
@@ -22,7 +23,7 @@ else
 exec	less -rf -FX /help.txt
 fi
 
-elif [ "${cmnd}" == "check" ]
+elif [ "${option}" == "check" ]
 then
 
 if [ "${url}" == "" ]
@@ -31,6 +32,10 @@ if [ "${url}" == "" ]
 else
 	exec linkchecker --check-css --check-html --complete --anchors --quiet -F=html/report/site_report.html ${url}
 fi
+
+elif [ "${option}" == "jekyll" -o "${option}" == "linkchecker" ]
+	then
+exec ${cmnd}
 
 else
 exec	less -rf -FX /help.txt

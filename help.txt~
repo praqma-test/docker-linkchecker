@@ -5,9 +5,9 @@ HELP TEXT:
 ¤¤¤¤¤  gijeli package was conceptualized and developed in PRAQMA, The House of DevOps & CoDers' ¤¤¤¤¤
 
                                     -Power User-
-  docker run -v $(pwd):/data -p <port>:4000 alipraqma/validator <jekyll/linkchecker command>
+  docker run -v $(pwd):/data alipraqma/validator <jekyll/linkchecker command>
 windows:
-  docker run -v $(pwd):\\data -p <port>:4000 alipraqma/validator <jekyll/linkchecker command>
+  docker run -v $(pwd):\\data alipraqma/validator <jekyll/linkchecker command>
 
 
                                       -User-
