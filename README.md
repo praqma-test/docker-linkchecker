@@ -1,4 +1,4 @@
-==_this document is entitled to be updated before release of subjected product_==
+==this document is entitled to be updated before release of subjected product==
 # Introduction to gijeli+ 
 GiJeLi is a subtraction of the words Git Jekyll and Liquid which is the technology stack behind the GitHub Pages technology. At Praqma: The entire technology stack is wrapped up in a single Docker image - Including dynamic link validation. The docker images is used on clients during development and on Jenkins slaves as part of the continuous delivery pipeline in combination with the Josra Automated Git flow and the Git pretested integration plugin.
 
