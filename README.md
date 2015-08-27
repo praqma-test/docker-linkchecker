@@ -35,13 +35,13 @@ Being a power user you can exploit all features of tools bunddled in gijeli, **j
 ```
 linux / Mac:
 $ docker run -v $(pwd):/data -p <port>:4000 alipraqma/validator jekyll serve --watch --force_polling -H 0.0.0.0
-→ access your  web pages at http://localhost:<port>
+→ access web pages at http://localhost:<port>
 
 Windows:
 $ docker run -v $(pwd):\\data -p <port>:4000 alipraqma/validator jekyll serve --watch --force_polling -H 0.0.0.0
-→ access your  web pages at http://<boot2docker IP>:<port>
+→ access web pages at http://<boot2docker IP>:<port>
 ```
-- Given example runs linkchecker on provided <URL> for pages rendered outside of container and stores validation report in html format, for more linkchecker features see [this link](http://wummel.github.io/linkchecker/) 
+- Given example runs linkchecker on provided URL for pages rendered outside of container and stores validation report in html format, for more linkchecker features see [this link](http://wummel.github.io/linkchecker/) 
 
 ```
 linux / Mac:
@@ -50,7 +50,7 @@ $  docker run -v $(pwd):/data alipraqma/validator linkchecker --check-css --chec
 windows:
 $ docker run -v $(pwd):\\data alipraqma/validator linkchecker --check-css --check-html --complete --anchors --quiet -F=html/<directory-name>/<file-name>.html <URL>
 
-→ report will be saved in <directory-name> under <file-name>, in your Present Working Directory
+→ report will be saved in <directory-name> under <file-name> in Present Working Directory
 
 ```
 
